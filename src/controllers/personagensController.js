@@ -1,5 +1,3 @@
-// const personagens = require("../model/personagens.json")
-
 const Personagens = require('../model/personagens.js');
 
 const fs = require('fs');
