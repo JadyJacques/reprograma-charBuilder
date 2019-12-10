@@ -1,12 +1,32 @@
 const mongoose = require ("mongoose");
 
 const PersonagensSchema = new mongoose.Schema ({
-        nickname: {type: String},
-        faccao: {type: String},
-        raca: {type: String},
-        genero: {type: String},
-        classe: {type: String},
-        level: {type: Number}
+        nickname: {
+                type: String, 
+                required: true,
+                maxlength: 10
+            },
+            faccao: {
+                type: String, 
+                required: true
+            },
+            raca: {
+                type: String, 
+                required: true
+            },
+            genero: {
+                type: String, 
+                required: true
+            },
+            classe: {
+                type: String, 
+                required: true,
+            },
+            level: {
+                type: String, 
+                required: true,
+                maxlength: 2
+            }
         
 })
 

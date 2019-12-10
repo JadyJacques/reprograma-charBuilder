@@ -1,8 +1,20 @@
 const mongoose = require ("mongoose");
 
 const UsersSchema = new mongoose.Schema ({
-        nome: {type: String},
-        senha: {type: String}
+        nome: {
+                type: String,
+                required: true,
+                maxlength: 100
+            },
+            senha: {
+                type: String,
+                required: true,
+                maxlength: 8
+            }
+        }, {
+            timestamps: true
+        
+        
         
 })
 
