@@ -15,6 +15,7 @@ db.once("open", function(){
 //rotas
 const index = require("./routes/index")
 const personagens = require("./routes/personagensRoute")
+const users = require (".routes/usersRoute")
 
 app.use(express.json());
 
@@ -29,5 +30,6 @@ app.use(function(req, res, next) {
 
 app.use("/", index)
 app.use("/personagens", personagens)
+app.use("/users", users)
 
 module.exports = app

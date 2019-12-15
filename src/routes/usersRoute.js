@@ -3,7 +3,7 @@ const router = express.Router()
 const controller = require("../controllers/usersController")
 
 
-//aqui vai a rota
+router.get("/", controller.get)
 
 
 
