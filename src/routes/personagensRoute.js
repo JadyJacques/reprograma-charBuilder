@@ -10,9 +10,118 @@ const controller = require("../controllers/personagensController")
  * @apiSuccess {Array} Personagens Lista de todos personagens
  * @apiSuccessExample {json} Sucesso
  *    HTTP/1.1 200 OK
- *    {
- *      "status": "Você saiu do sistema!"
- *    }
+ *    [
+{
+"_id": "5df766106623fd1b3c71cd95",
+"nickname": "aragantinis",
+"faccao": "alianca",
+"raca": "humano",
+"genero": "male",
+"classe": "mage",
+"level": 30,
+"__v": 0
+},
+{
+"_id": "5df7a91cf8798a27284e5039",
+"nickname": "darkj",
+"faccao": "alianca",
+"raca": "draenei",
+"genero": "female",
+"classe": "xamã",
+"level": 85,
+"__v": 0
+},
+{
+"_id": "5df7a939f8798a27284e503a",
+"nickname": "jerrik",
+"faccao": "alianca",
+"raca": "humano",
+"genero": "male",
+"classe": "paladin",
+"level": 85,
+"__v": 0
+},
+{
+"_id": "5df7a95bf8798a27284e503b",
+"nickname": "zero",
+"faccao": "horda",
+"raca": "elfo sangrento",
+"genero": "male",
+"classe": "paladin",
+"level": 85,
+"__v": 0
+},
+{
+"_id": "5df7a971f8798a27284e503c",
+"nickname": "natpoison",
+"faccao": "horda",
+"raca": "elfo sangrento",
+"genero": "female",
+"classe": "warlock",
+"level": 85,
+"__v": 0
+},
+{
+"_id": "5df7a98bf8798a27284e503d",
+"nickname": "flafuh",
+"faccao": "alianca",
+"raca": "elfo noturno",
+"genero": "female",
+"classe": "druid",
+"level": 72,
+"__v": 0
+},
+{
+"_id": "5df7a9d4f8798a27284e503e",
+"nickname": "scarmoon",
+"faccao": "alianca",
+"raca": "human",
+"genero": "female",
+"classe": "death knight",
+"level": 80,
+"__v": 0
+},
+{
+"_id": "5df7a9eef8798a27284e503f",
+"nickname": "paladinex",
+"faccao": "alianca",
+"raca": "human",
+"genero": "male",
+"classe": "paladin",
+"level": 85,
+"__v": 0
+},
+{
+"_id": "5df7aa07f8798a27284e5040",
+"nickname": "ruto",
+"faccao": "alianca",
+"raca": "human",
+"genero": "female",
+"classe": "priest",
+"level": 85,
+"__v": 0
+},
+{
+"_id": "5df7aa26f8798a27284e5041",
+"nickname": "sylvannas",
+"faccao": "horda",
+"raca": "elfo sangrento",
+"genero": "female",
+"classe": "hunter",
+"level": 85,
+"__v": 0
+},
+{
+"_id": "5df7aa40f8798a27284e5042",
+"nickname": "jaina",
+"faccao": "aliaca",
+"raca": "human",
+"genero": "female",
+"classe": "mage",
+"level": 85,
+"__v": 0
+}
+]
  */
 
 router.get("/", controller.get)
@@ -62,6 +171,12 @@ router.delete("/:nickname", controller.DeletePersonagem)
  * @apiGroup Personagens
  *
  * @apiSuccess {Personagem} Personagens Lista de personagens
+ *
+ * * @apiSuccessExample {json} Sucesso
+ *    HTTP/1.1 200 OK
+ *    {
+    "message": "darkj foi atualizado!"
+    }
  */
 
 router.put("/:nickname", controller.UpdatePersonagem)
