@@ -4,6 +4,8 @@ const mongoose = require("mongoose")
 const app = express()
 require('dotenv').config()
 
+app.use(express.static('public'));
+
 mongoose.connect(process.env.URL_MONGO, { useNewUrlParser: true});
 
 let db = mongoose.connection;

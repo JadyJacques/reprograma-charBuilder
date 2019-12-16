@@ -32,7 +32,7 @@ exports.post = (req, res) => {
 exports.getByNickname = (req, res) => {
   const nickname = req.params.nickname
   Personagens.findOne({ nickname }, function (err, personagem) {
-    if (err) res.status(500).send('deu ruim, mano')
+    if (err) res.status(500).send({message: 'deu ruim, mano'})
 
     res.status(201).send(personagem)
   })
@@ -41,7 +41,7 @@ exports.getByNickname = (req, res) => {
 exports.getByClass = (req, res) => {
   const classe = req.params.classe
   Personagens.find({ classe }, function (err, personagem) {
-    if (err) res.status(500).send('deu ruim, mano')
+    if (err) res.status(500).send( {message: 'deu ruim, mano'})
 
     res.status(200).send(personagem)
   })

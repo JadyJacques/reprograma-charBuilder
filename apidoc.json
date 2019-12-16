@@ -1,0 +1,8 @@
+{
+    "name": "char-builder-api",
+    "version": "1.0.0",
+    "description": "api de personagens de world of warcraft",
+    "template": {
+        "forceLanguage": "en"
+    }
+}
